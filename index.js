@@ -4,6 +4,8 @@ const { RNKaKaoSignin } = NativeModules;
 
 const requestMeUrl = 'https://kapi.kakao.com/v1/user/me';
 
+var kakaoAccessToken = '';
+
 /**
  * requestMe - Returns user profile from Kakao API
  *
@@ -25,7 +27,7 @@ function requestMe(kakaoAccessToken) {
 const KakaoSignin = {
   async signIn() {
     try {
-      let kakaoAccessToken = await RNKaKaoSignin.signIn();
+      kakaoAccessToken = await RNKaKaoSignin.signIn();
       console.log("KakaoSignin::login:: ", kakaoAccessToken);
 
       return requestMe(kakaoAccessToken);
@@ -36,6 +38,9 @@ const KakaoSignin = {
   },
   signOut() {
     return RNKaKaoSignin.signOut();
+  },
+  getAccessToken() {
+    return kakaoAccessToken;
   }
 };
 
