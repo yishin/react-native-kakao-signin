@@ -17,7 +17,7 @@ public class RNKaKaoSigninPackage implements ReactPackage {
       return Arrays.<NativeModule>asList(new RNKaKaoSigninModule(reactContext));
     }
 
-    @Override
+    //@Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }
