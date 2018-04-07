@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git@github.com:sunyrora/react-native-kakao-signin.git"
   },
-  "peerDependencies": {
-    "react-native": "^0.51.0"
-  },
   "keywords": [
     "react-native",
     "kakao login",
