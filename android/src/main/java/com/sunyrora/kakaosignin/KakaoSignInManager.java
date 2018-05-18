@@ -106,23 +106,23 @@ class KakaoSignInManager {
 
     private List<AuthType> getAuthTypes() {
         Context context = reactContext.getBaseContext();
-        final List<AuthType> availableAuthTypes = new ArrayList<AuthType>();
-        if(TalkProtocol.existCapriLoginActivityInTalk(context, Session.getCurrentSession().isProjectLogin())){
+//         final List<AuthType> availableAuthTypes = new ArrayList<AuthType>();
+//         if(TalkProtocol.existCapriLoginActivityInTalk(context, Session.getCurrentSession().isProjectLogin())){
             availableAuthTypes.add(AuthType.KAKAO_TALK);
-            availableAuthTypes.add(AuthType.KAKAO_TALK_EXCLUDE_NATIVE_LOGIN);
-        }
-        if(StoryProtocol.existCapriLoginActivityInStory(context, Session.getCurrentSession().isProjectLogin())){
-            availableAuthTypes.add(AuthType.KAKAO_STORY);
-        }
-        availableAuthTypes.add(AuthType.KAKAO_ACCOUNT);
+//             availableAuthTypes.add(AuthType.KAKAO_TALK_EXCLUDE_NATIVE_LOGIN);
+//         }
+//         if(StoryProtocol.existCapriLoginActivityInStory(context, Session.getCurrentSession().isProjectLogin())){
+//             availableAuthTypes.add(AuthType.KAKAO_STORY);
+//         }
+//         availableAuthTypes.add(AuthType.KAKAO_ACCOUNT);
 
-        final AuthType[] selectedAuthTypes = Session.getCurrentSession().getAuthTypes();
-        availableAuthTypes.retainAll(Arrays.asList(selectedAuthTypes));
+//         final AuthType[] selectedAuthTypes = Session.getCurrentSession().getAuthTypes();
+//         availableAuthTypes.retainAll(Arrays.asList(selectedAuthTypes));
 
-        // 개발자가 설정한 것과 available 한 타입이 없다면 직접계정 입력이 뜨도록 한다.
-        if(availableAuthTypes.size() == 0){
-            availableAuthTypes.add(AuthType.KAKAO_ACCOUNT);
-        }
+//         // 개발자가 설정한 것과 available 한 타입이 없다면 직접계정 입력이 뜨도록 한다.
+//         if(availableAuthTypes.size() == 0){
+//             availableAuthTypes.add(AuthType.KAKAO_ACCOUNT);
+//         }
         return availableAuthTypes;
     }
 
