@@ -106,7 +106,7 @@ class KakaoSignInManager {
 
     private List<AuthType> getAuthTypes() {
         Context context = reactContext.getBaseContext();
-//         final List<AuthType> availableAuthTypes = new ArrayList<AuthType>();
+        final List<AuthType> availableAuthTypes = new ArrayList<AuthType>();
 //         if(TalkProtocol.existCapriLoginActivityInTalk(context, Session.getCurrentSession().isProjectLogin())){
             availableAuthTypes.add(AuthType.KAKAO_TALK);
 //             availableAuthTypes.add(AuthType.KAKAO_TALK_EXCLUDE_NATIVE_LOGIN);
