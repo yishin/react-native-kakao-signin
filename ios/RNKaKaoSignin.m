@@ -25,7 +25,7 @@ RCT_REMAP_METHOD(signIn,
             // failed
             reject(@"signIn failed.", @"", error);
         }
-    }];
+    } authType:(KOAuthType)KOAuthTypeTalk, nil];
 }
 
 RCT_REMAP_METHOD(signOut,
